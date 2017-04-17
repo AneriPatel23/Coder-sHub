@@ -1,0 +1,26 @@
+// Example 1: From an element in DOM
+$('.open-popup-link').magnificPopup({
+  type:'inline',
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+
+
+$('.open-popup-link-folder').magnificPopup({
+  type:'inline',
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+
+$('.open-popup-link-file').magnificPopup({
+  type:'inline',
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+
+
+// Example: 2 Dynamically created
+$('button').magnificPopup({
+  items: {
+      src: '<div class="white-popup">Dynamically created popup</div>',
+      type: 'inline'
+  },
+  closeBtnInside: true
+});

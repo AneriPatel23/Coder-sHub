@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.ModuleVO" table="module">
+
+		<id name="moduleId" type="int" column="ID">
+			<generator class="increment" />
+		</id>
+		
+				
+		<property name="moduleName">
+			<column name="moduleName" />
+		</property>
+		
+		<many-to-one class="VO.ProjectVO" name="pv" column="projectID"></many-to-one>
+		
+	</class>
+</hibernate-mapping>

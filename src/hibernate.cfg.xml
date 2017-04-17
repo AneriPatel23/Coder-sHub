@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/coders_hub1</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		<property name="hibernate.connection.pool_size">10</property>
+		<property name="show_sql">true</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		
+		<!-- Mapping files -->
+		<mapping resource="VO/company.hbm.xml" />
+		<mapping resource="VO/developer.hbm.xml" />
+		<mapping resource="VO/registeredUser.hbm.xml" />
+		<mapping resource="VO/project.hbm.xml" />
+		<mapping resource="VO/feedback.hbm.xml" />
+		<mapping resource="VO/database.hbm.xml" />
+		<mapping resource="VO/complain.hbm.xml" />
+		 <mapping resource="VO/country.hbm.xml" />
+		<mapping resource="VO/state.hbm.xml" />
+		<mapping resource="VO/module.hbm.xml" />
+		<mapping resource="VO/file.hbm.xml" />
+		<mapping resource="VO/login.hbm.xml" />
+				
+ 
+	</session-factory>
+</hibernate-configuration>

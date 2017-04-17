@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.ComplainVO" table="complain">
+
+		<id name="complainId" type="int" column="ID">
+			<generator class="increment" />
+		</id>
+		
+		<property name="subject">
+			<column name="subject" />
+		</property>
+		
+		<property name="description">
+			<column name="description" />
+		</property>
+		
+		<property name="other">
+			<column name="other" />
+		</property>
+		<many-to-one class="VO.LoginVO" name="toUserId" column="ToUser"></many-to-one>
+		<many-to-one class="VO.LoginVO" name="fromUserId" column="FromUser"></many-to-one>
+	</class>
+</hibernate-mapping>

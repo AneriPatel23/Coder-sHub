@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.DeveloperVO" table="developer">
+
+		<id name="developerId" type="int" column="ID">
+			<generator class="increment" />
+		</id>
+		
+		<property name="firstName">
+			<column name="firstName" />
+		</property>
+		
+		<property name="lastName">
+			<column name="lastName" />
+		</property>
+		
+		<property name="dateOfBirth" type="date">
+			<column name="dateOfBirth" />
+		</property>
+		
+		<property name="address">
+			<column name="address" />
+		</property>
+		
+		
+		
+		<property name="phoneNumber" type="int">
+			<column name="phoneNumber" />
+		</property>
+		<many-to-one class="VO.CompanyVO" name="companyVO" column="companyId"></many-to-one>
+		<many-to-one class="VO.LoginVO" name="loginVO" column="userID"></many-to-one>
+	</class>
+</hibernate-mapping>
